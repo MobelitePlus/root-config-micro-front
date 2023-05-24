@@ -1,0 +1,10 @@
+{
+  "extends": "ts-config-single-spa",
+  "files": ["src/plateforme-sifast-root-config.ts"],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "declarationDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}

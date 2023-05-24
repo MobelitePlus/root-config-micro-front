@@ -1,0 +1,17 @@
+<single-spa-router>
+  <main>
+    <application name="@plateforme-sifast/root-app"></application>
+    <route path="main">
+      <application
+        name="@plateforme-sifast/main-app"
+        loader="appLoader"
+      ></application>
+    </route>
+    <route path="403">
+      <div id="403_"></div>
+    </route>
+    <route path="404">
+      <div id="404_"></div>
+    </route>
+  </main>
+</single-spa-router>

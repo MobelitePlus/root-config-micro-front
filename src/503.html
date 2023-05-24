@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Site Maintenance</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style type="text/css">
+      /* Split the screen in half */
+      .split {
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        padding-top: 20px;
+      }
+
+      /* Control the left side */
+      .left {
+        left: 0;
+      }
+
+      /* Control the right side */
+      .right {
+        right: 0;
+      }
+
+      /* Content centered horizontally and vertically */
+      .centered {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .centered img {
+        width: 1100px;
+      }
+
+      body {
+        text-align: center;
+        padding: 150px;
+      }
+      h1 {
+        font-size: 60px;
+        color: #ff5722;
+        font-weight: 400;
+        line-height: 70px;
+      }
+      body {
+        font: 20px Montserrat, sans-serif;
+        color: #646464;
+      }
+      article {
+        display: block;
+        text-align: left;
+        width: 650px;
+        margin: 0 auto;
+      }
+      a {
+        color: #ff5722;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #58585d;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <div>
+    <div class="split left">
+      <div class="centered">
+        <article>
+          <h1>La Plateforme est en Maintenance</h1>
+          <div>
+            <p>
+              Nous sommes désolés pour le dérangement, mais nous effectuons des
+              travaux de maintenance en ce moment. Si vous en avez besoin, vous
+              pouvez toujours
+              <a href="mailto:intranet-teams@sifast.com">nous contacter</a>,
+              sinon nous serons de retour en ligne le plus tôt possible !
+            </p>
+            <p>&mdash; Team Plateforme Sifast</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="split right">
+      <div class="centered">
+        <img class="503-image" src="/assets/images/503.svg" alt="503-image" />
+      </div>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,8 @@
+repoSifast: nexus.sifast.com:8087/
+imageName: root-config-micro-front:itg
+app_NAME: root-config-micro-front-itg
+space_NAME: root-config-micro-front
+app_PORT: 31603
+ssl_PORT: 31604
+app_env: itg
+devops_label: projects

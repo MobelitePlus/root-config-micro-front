@@ -1,0 +1,18 @@
+{
+  "default": {
+    "host": "http://192.168.66.212:31602/import-map.json?env=default",
+    "showImportMapOverrides": true
+  },
+  "itg": {
+    "host": "http://192.168.66.212:31602/import-map.json?env=itg",
+    "showImportMapOverrides": true
+  },
+  "rec": {
+    "host": "http://192.168.66.212:31602/import-map.json?env=rec",
+    "showImportMapOverrides": true
+  },
+  "prod": {
+    "host": "http://192.168.66.212:31602/import-map.json?env=prod",
+    "showImportMapOverrides": false
+  }
+}

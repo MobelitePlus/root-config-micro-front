@@ -1,0 +1,47 @@
+.error-page .image-error {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 800px;
+}
+.error-page .toolbar {
+  width: 100%;
+  background: transparent;
+}
+.error-page .btn {
+  border-radius: 39px !important;
+  color: #fff !important;
+  background-color: #ff5722 !important;
+  font-size: 20px !important;
+  font-family: "Montserrat", Sans-serif;
+  padding: 0.4em 2em 0.4em 2em !important;
+  width: 150px;
+}
+.error-page .btn:hover {
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%) !important;
+}
+
+.error-page .btn:focus {
+  outline: none !important;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgb(0 0 0 / 12%) !important;
+}
+
+.error-page .btn-holder {
+  padding: 15px 30px 30px 30px;
+}
+.error-text {
+  color: #f1592b;
+  font-family: "Montserrat", Sans-serif;
+}
+.error-page .block-container {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 30px;
+}
+.error-page .center-container {
+  text-align: center;
+}

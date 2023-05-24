@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  plateforme-sifast-root-config:
+    hostname: localhost
+    container_name: plateforme-sifast-root-config_test
+    build:
+      context: .
+      dockerfile: ./test.dockerfile
+    restart: always
+    ports:
+      - 80:80

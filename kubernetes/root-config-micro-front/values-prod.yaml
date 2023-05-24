@@ -1,0 +1,8 @@
+repoSifast: nexus.sifast.com:8087/
+imageName: root-config-micro-front:prod
+app_NAME: root-config-micro-front-prod
+space_NAME: root-config-micro-front
+app_PORT: 31607
+ssl_PORT: 31608
+app_env: prod
+devops_label: prod

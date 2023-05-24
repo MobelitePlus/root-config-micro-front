@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  plateforme-sifast-root-config:
+    hostname: localhost
+    container_name: plateforme-sifast-root-config
+    build: .
+    restart: always
+    volumes:
+      - .:/plateforme-sifast-root-config
+      - /plateforme-sifast-root-config/node_modules
+    tty: true
+    ports:
+      - 9090:9000

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Plateforme SiFAST" />
+  <meta name="keywords" content="Plateforme SiFAST, Articles, Mutuelles, Congés, Contacts" />
+  <meta name="author" content="SiFAST" />
+  <link rel="stylesheet" href="/styles/styles.css">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * data: blob: 'unsafe-inline'; font-src * data: blob: 'unsafe-inline';" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Plateforme SiFAST</title>
+  <!--
+    Remove this if you only support browsers that support async/await.
+    This is needed by babel to share largeish helper code for compiling async/await in older
+    browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+
+  <!--
+    This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
+    Learn more about CSP policies at https://content-security-policy.com/#directive
+  -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"> -->
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
+  <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
+  <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
+
+  <!-- Shared dependencies go into this import map. Your shared dependencies must be of one of the following formats:
+
+    1. System.register (preferred when possible) - https://github.com/systemjs/systemjs/blob/master/docs/system-register.md
+    2. UMD - https://github.com/umdjs/umd
+    3. Global variable
+
+    More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
+  -->
+
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <!-- Add your organization's prod import map URL to this script's src  -->
+  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
+
+  <script type="systemjs-importmap" src=<%= env.host %> ></script>
+
+  <!--
+    If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
+    Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <script>
+    const goBack = () => {
+      history.length > 2 ? window.history.back() : window.location.assign("/");
+    };
+  </script>
+  <style type="text/css">
+    html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+}
+
+.app-loading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-loading .spinner {
+  height: 200px;
+  width: 200px;
+  animation: rotate 2s linear infinite;
+  transform-origin: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.app-loading .spinner .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #ff5722;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+.scroller {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.logo {
+  height: 64px;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+  </style>
+
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <script>
+    System.import('@plateforme-sifast/root-config');
+  </script>
+  
+</body>
+<% if(env.showImportMapOverrides){ %>
+  <import-map-overrides-full></import-map-overrides-full>
+<% } %>
+</html>
